@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap");
+html {
+    font-family: Montserrat, sans-serif;
+}
+body {
+    margin: 0;
+    height: 100%;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container .eye {
+    position: relative;
+    display: none;
+    width: 90%;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+    animation: tada 2s;
+}
+.container .button {
+    position: absolute;
+    color: white;
+    width: 190px;
+    height: 38px;
+    font-size: 8px;
+    background-color: #171717;
+    filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.451));
+    border-radius: 18.15px;
+    margin-top: 0px;
+    top: 0px;
+    animation: jello 1s;
+}
+.container .button#button_1 {
+    left: 125px;
+    top: -7px;
+}
+.container .button#button_2 {
+    right: 125px;
+    top: -7px;
+}
+.container .button#button_3 {
+    left: -65px;
+    top: -90px;
+}
+.container .button#button_4 {
+    left: -65px;
+    top: 90px;
+}
+.container .button#button_6 {
+    right: 155px;
+    top: 90px;
+}
+  
+.container .button#button_7 {
+    right: 155px;
+    top: 150px;
+}
+
+.container .button#button_8 {
+    left: 155px;
+    top: 150px;
+}
+  
+.container .button#button_9 {
+    right: 155px;
+    top: 210px;
+}
+  
+.container .button p {
+    position: relative;
+    text-align: center;
+    top: -5px;
+    font-size: 14px;
+}
+.container .button p:hover {
+    color: #969696;
+}
+@keyframes tada {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+    10%,
+    20% {
+        transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%,
+    60%,
+    80% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}

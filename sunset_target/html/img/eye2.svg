@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="74.484" height="45.959" viewBox="0 0 74.484 45.959">
+  <defs>
+    <filter id="Frame" x="0" y="0" width="74.484" height="45.959" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Eye" transform="translate(-71.513 9.319)">
+    <g transform="matrix(1, 0, 0, 1, 71.51, -9.32)" filter="url(#Frame)">
+      <path id="Frame-2" data-name="Frame" d="M6876.665,7012.9c-14.134,15.972-37.008,15.972-51.143,0C6839.657,6996.932,6862.53,6996.932,6876.665,7012.9Z" transform="translate(-6813.85 -6993.92)" fill="none" stroke="#F06B16" stroke-miterlimit="10" stroke-width="4"/>
+    </g>
+    <circle id="Center" cx="9.219" cy="9.219" r="9.219" transform="translate(99.536 0.441)" fill="none" stroke="#F06B16" stroke-miterlimit="10" stroke-width="4"/>
+    <path id="Center_2" data-name="Center 2" d="M2.383,0A2.383,2.383,0,1,1,0,2.383,2.383,2.383,0,0,1,2.383,0Z" transform="translate(106.373 7.278)" fill="#F06B16" stroke="#F06B16" stroke-width="4"/>
+  </g>
+</svg>

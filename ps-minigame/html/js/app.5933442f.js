@@ -1,0 +1,343 @@
+(function (e) {
+    function s(s) {
+        for (var r, i, a = s[0], c = s[1], h = s[2], d = 0, u = []; d < a.length; d++) (i = a[d]), Object.prototype.hasOwnProperty.call(o, i) && o[i] && u.push(o[i][0]), (o[i] = 0);
+        for (r in c) Object.prototype.hasOwnProperty.call(c, r) && (e[r] = c[r]);
+        l && l(s);
+        while (u.length) u.shift()();
+        return n.push.apply(n, h || []), t();
+    }
+    function t() {
+        for (var e, s = 0; s < n.length; s++) {
+            for (var t = n[s], r = !0, a = 1; a < t.length; a++) {
+                var c = t[a];
+                0 !== o[c] && (r = !1);
+            }
+            r && (n.splice(s--, 1), (e = i((i.s = t[0]))));
+        }
+        return e;
+    }
+    var r = {},
+        o = { app: 0 },
+        n = [];
+    function i(s) {
+        if (r[s]) return r[s].exports;
+        var t = (r[s] = { i: s, l: !1, exports: {} });
+        return e[s].call(t.exports, t, t.exports, i), (t.l = !0), t.exports;
+    }
+    (i.m = e),
+        (i.c = r),
+        (i.d = function (e, s, t) {
+            i.o(e, s) || Object.defineProperty(e, s, { enumerable: !0, get: t });
+        }),
+        (i.r = function (e) {
+            "undefined" !== typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(e, "__esModule", { value: !0 });
+        }),
+        (i.t = function (e, s) {
+            if ((1 & s && (e = i(e)), 8 & s)) return e;
+            if (4 & s && "object" === typeof e && e && e.__esModule) return e;
+            var t = Object.create(null);
+            if ((i.r(t), Object.defineProperty(t, "default", { enumerable: !0, value: e }), 2 & s && "string" != typeof e))
+                for (var r in e)
+                    i.d(
+                        t,
+                        r,
+                        function (s) {
+                            return e[s];
+                        }.bind(null, r)
+                    );
+            return t;
+        }),
+        (i.n = function (e) {
+            var s =
+                e && e.__esModule
+                    ? function () {
+                          return e["default"];
+                      }
+                    : function () {
+                          return e;
+                      };
+            return i.d(s, "a", s), s;
+        }),
+        (i.o = function (e, s) {
+            return Object.prototype.hasOwnProperty.call(e, s);
+        }),
+        (i.p = "http://arcane.lv/time/dist/");
+    var a = (window["webpackJsonp"] = window["webpackJsonp"] || []),
+        c = a.push.bind(a);
+    (a.push = s), (a = a.slice());
+    for (var h = 0; h < a.length; h++) s(a[h]);
+    var l = c;
+    n.push([0, "chunk-vendors"]), t();
+})({
+    0: function (e, s, t) {
+        e.exports = t("56d7");
+    },
+    "1cc7": function (e, s, t) {},
+    "56d7": function (e, s, t) {
+        "use strict";
+        t.r(s);
+        var r = t("2b0e"),
+            o = function () {
+                var e = this,
+                    s = e._self._c;
+                return s("div", { attrs: { id: "app" } }, [s("div", { attrs: { id: "nav" } }), s("router-view")], 1);
+            },
+            n = [],
+            i = (t("bcac"), t("2877")),
+            a = {},
+            c = Object(i["a"])(a, o, n, !1, null, null, null),
+            h = c.exports,
+            l = t("8c4f"),
+            d = function () {
+                var e = this,
+                    s = e._self._c;
+                return s("div", [s("time-counter", { attrs: { activeCases: 20 } })], 1);
+            },
+            u = [],
+            p = function () {
+                var e = this,
+                    s = e._self._c;
+                return e.started
+                    ? s("div", { staticClass: "wrapper" }, [
+                          s("div", { staticClass: "title" }, [e._v(" " + e._s(e.text) + " ")]),
+                          s("div", { staticClass: "container" }, [
+                              s(
+                                  "div",
+                                  { staticClass: "center" },
+                                  [
+                                      s(
+                                          "vue-ellipse-progress",
+                                          {
+                                              attrs: {
+                                                  id: "timer-example",
+                                                  progress: e.secondsProgress,
+                                                  determinate: e.determinate,
+                                                  color: e.colorProg,
+                                                  legendValue: e.secondsProgress,
+                                                  "empty-color": "#fff",
+                                                  dot: { size: 10, backgroundColor: "white", width: "1px" },
+                                                  thickness: "3",
+                                                  emptyThickness: "5",
+                                                  size: 180,
+                                                  dash: "strict 60 0.8",
+                                                  lineMode: "in-over",
+                                                  emptyColorFill: e.emptyColorFill,
+                                                  legend: !1,
+                                                  legendClass: "legend-custom-style",
+                                                  fontSize: "1.5rem",
+                                                  "font-color": "white",
+                                                  animation: "loop 100 100",
+                                                  loading: e.loading,
+                                                  "no-data": e.noData,
+                                                  fontSize: "4rem",
+                                              },
+                                          },
+                                          [s("div", { attrs: { slot: "legend-caption" }, slot: "legend-caption" }, [s("div", { staticClass: "caption" }, [e._v(e._s(e.rounds) + "/" + e._s(e.roundsMax))])])]
+                                      ),
+                                  ],
+                                  1
+                              ),
+                              s("div", { staticClass: "top" }, [s("transition", { attrs: { name: "bounce" } }, [e.showbtn[0] ? s("div", { staticClass: "keyboard-button" }, [e._v(e._s(e.show1 ? this.chosenKey[0] : "?"))]) : e._e()])], 1),
+                              s(
+                                  "div",
+                                  { staticClass: "right" },
+                                  [
+                                      s("transition", { attrs: { name: "bounce" } }, [
+                                          s("div", { directives: [{ name: "show", rawName: "v-show", value: e.showbtn[1], expression: "showbtn[1]" }], staticClass: "keyboard-button" }, [e._v(e._s(e.show2 ? this.chosenKey[1] : "?"))]),
+                                      ]),
+                                  ],
+                                  1
+                              ),
+                              s(
+                                  "div",
+                                  { staticClass: "bottom" },
+                                  [
+                                      s("transition", { attrs: { name: "bounce" } }, [
+                                          s("div", { directives: [{ name: "show", rawName: "v-show", value: e.showbtn[2], expression: "showbtn[2]" }], staticClass: "keyboard-button" }, [e._v(e._s(e.show3 ? this.chosenKey[2] : "?"))]),
+                                      ]),
+                                  ],
+                                  1
+                              ),
+                              s(
+                                  "div",
+                                  { staticClass: "left" },
+                                  [
+                                      s("transition", { attrs: { name: "bounce" } }, [
+                                          s("div", { directives: [{ name: "show", rawName: "v-show", value: e.showbtn[3], expression: "showbtn[3]" }], staticClass: "keyboard-button" }, [e._v(e._s(e.show4 ? this.chosenKey[3] : "?"))]),
+                                      ]),
+                                  ],
+                                  1
+                              ),
+                          ]),
+                      ])
+                    : e._e();
+            },
+            m = [],
+            f = (t("14d9"), t("1157")),
+            y = t.n(f),
+            v = {
+                name: "timeCounter",
+                props: { activeCases: { type: Number, required: !0 } },
+                data() {
+                    return {
+                        started: !1,
+                        circles: [],
+                        show1: !0,
+                        show2: !1,
+                        show3: !1,
+                        show4: !1,
+                        showbtn: [!0, !0, !0, !0],
+                        time: 15,
+                        text: "",
+                        colorProg: "#ffd905",
+                        currentKey: null,
+                        currentKeyId: null,
+                        keys: ["W", "A", "S", "D"],
+                        rounds: 9,
+                        chosenKey: [],
+                        roundsMax: 9,
+                        secondsProgress: 0,
+                        secondsLegend: 0,
+                        millisecondsValue: 0,
+                        emptyColorFill: {
+                            radial: !0,
+                            colors: [
+                                { color: "#000", offset: "50", opacity: "0.2" },
+                                { color: "#000", offset: "50", opacity: "0.15" },
+                                { color: "#000", offset: "70", opacity: "0.15" },
+                                { color: "#000", offset: "70", opacity: "0.1" },
+                                { color: "#000", offset: "90", opacity: "0.1" },
+                                { color: "transparent", offset: "90", opacity: "0.1" },
+                                { color: "transparent", offset: "95", opacity: "0.1" },
+                                { color: "transparent", offset: "95", opacity: "0.1" },
+                            ],
+                        },
+                    };
+                },
+                mounted: function () {
+                    let e = this;
+                    window.addEventListener("message", function (s) {
+                        var t = s.data;
+                        "startGame" == t.action &&
+                            ((e.currentKey = null),
+                            (e.currentKeyId = null),
+                            (e.show1 = !0),
+                            (e.show2 = !1),
+                            (e.show3 = !1),
+                            (e.show4 = !1),
+                            (e.showbtn = [!0, !0, !0, !0]),
+                            (e.secondsLegend = 0),
+                            (e.secondsProgress = 0),
+                            (e.time = t.time),
+                            (e.text = t.text),
+                            (e.colorProg = t.color),
+                            (e.rounds = t.rounds),
+                            (e.roundsMax = t.rounds),
+                            (e.roundsMax = t.rounds),
+                            clearInterval(e.msTimer2),
+                            clearInterval(this.msTimer),
+                            (e.started = !0),
+                            e.picker(),
+                            (e.msTimer2 = setInterval(() => {
+                                e.setTimer();
+                            }, 2500)));
+                    }),
+                        window.addEventListener("keydown", (s) => {
+                            console.log(s.keyCode);
+                            switch (s.keyCode) {
+                                case 87:
+                                    e.key = 'w'
+                                case 83:
+                                    e.key = 's'
+                                case 65:
+                                    e.key = 'a'
+                                case 68:
+                                    e.key = 'd'
+                                default:
+                                    break;
+                              }
+                            s.key.toLowerCase() == e.currentKey.toLowerCase()
+                                ? ((e.secondsLegend = ((25 * (e.currentKeyId + 1)) / 100) * e.time), (e.showbtn[this.currentKeyId] = !1))
+                                : (clearInterval(this.msTimer), (e.started = !1), y.a.post("http://ps-minigame/callback", JSON.stringify({ success: !1 })));
+                        });
+                },
+                methods: {
+                    setTimer() {
+                        clearInterval(this.msTimer2),
+                            (this.msTimer = setInterval(() => {
+                                if (
+                                    (this.secondsProgress <= 25
+                                        ? ((this.show1 = !0), (this.currentKey = this.chosenKey[0]), (this.currentKeyId = 0))
+                                        : this.secondsProgress <= 50 && this.secondsProgress > 25
+                                        ? ((this.show2 = !0),
+                                          this.showbtn[this.currentKeyId] &&
+                                              1 !== this.currentKeyId &&
+                                              ((this.secondsLegend = 0), (this.secondsProgress = 0), clearInterval(this.msTimer), (this.started = !1), y.a.post("http://ps-minigame/callback", JSON.stringify({ success: !1 }))),
+                                          (this.currentKey = this.chosenKey[1]),
+                                          (this.currentKeyId = 1))
+                                        : this.secondsProgress <= 75 && this.secondsProgress > 50
+                                        ? ((this.show3 = !0),
+                                          (this.currentKey = this.chosenKey[2]),
+                                          (this.show1 = !1),
+                                          this.showbtn[this.currentKeyId] &&
+                                              2 !== this.currentKeyId &&
+                                              ((this.secondsLegend = 0), (this.secondsProgress = 0), clearInterval(this.msTimer), (this.started = !1), y.a.post("http://ps-minigame/callback", JSON.stringify({ success: !1 }))),
+                                          (this.currentKeyId = 2))
+                                        : this.secondsProgress <= 100 &&
+                                          this.secondsProgress > 75 &&
+                                          ((this.show4 = !0),
+                                          (this.currentKey = this.chosenKey[3]),
+                                          this.showbtn[this.currentKeyId] &&
+                                              3 !== this.currentKeyId &&
+                                              ((this.secondsLegend = 0), (this.secondsProgress = 0), clearInterval(this.msTimer), (this.started = !1), y.a.post("http://ps-minigame/callback", JSON.stringify({ success: !1 }))),
+                                          (this.currentKeyId = 3)),
+                                    this.secondsLegend >= this.time)
+                                ) {
+                                    (this.rounds = this.rounds - 1), (this.secondsLegend = 0), (this.secondsProgress = 0), (this.show1 = !1), (this.show2 = !1), (this.show3 = !1), (this.show4 = !1);
+                                    for (let e = 0; e < 4; e += 1) this.showbtn[e] = !0;
+                                    this.picker(), (this.show1 = !0), this.rounds <= 0 && ((this.started = !1), y.a.post("http://ps-minigame/callback", JSON.stringify({ success: !0 })), clearInterval(this.msTimer));
+                                }
+                                (this.secondsLegend = this.secondsLegend + 0.1), (this.secondsProgress = (100 * this.secondsLegend) / this.time);
+                            }, 100));
+                    },
+                    picker() {
+                        this.chosenKey = [];
+                        for (let s = 0; s < 4; s += 1) {
+                            var e = Math.floor(Math.random() * this.keys.length);
+                            this.chosenKey.push(this.keys[e]);
+                        }
+                    },
+                },
+                destroyed: function () {
+                    clearInterval(this.msTimer);
+                },
+            },
+            w = v,
+            g = (t("dce8"), Object(i["a"])(w, p, m, !1, null, null, null)),
+            b = g.exports,
+            K = { components: { timeCounter: b }, name: "Home" },
+            _ = K,
+            P = Object(i["a"])(_, d, u, !1, null, null, null),
+            I = P.exports;
+        r["a"].use(l["a"]);
+        const C = [{ path: "/", name: "Home", component: I }],
+            k = new l["a"]({ routes: C });
+        var x = k,
+            O = t("2f62");
+        r["a"].use(O["a"]);
+        var T = new O["a"].Store({ state: {}, mutations: {}, actions: {}, modules: {} }),
+            L = t("9949"),
+            S = t.n(L);
+        r["a"].use(S.a), (r["a"].config.productionTip = !1), new r["a"]({ router: x, store: T, render: (e) => e(h) }).$mount("#app");
+    },
+    bcac: function (e, s, t) {
+        "use strict";
+        t("c06e");
+    },
+    c06e: function (e, s, t) {},
+    dce8: function (e, s, t) {
+        "use strict";
+        t("1cc7");
+    },
+});
+//# sourceMappingURL=app.5933442f.js.map

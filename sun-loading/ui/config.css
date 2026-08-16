@@ -1,0 +1,19 @@
+body{
+    margin: 0px;
+    padding: 0px;
+
+    overflow-y: hidden;
+    overflow-x: hidden; 
+}
+
+#myvideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%; 
+    width: 100%;
+    height: 100%;
+  }
+
+  

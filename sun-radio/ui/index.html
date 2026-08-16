@@ -1,0 +1,30 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.core.min.js"></script>
+    <script>
+        let radio;
+        window.addEventListener('message', (event) => {
+            if (event.data.action == 'play') {
+                stop();
+                radio = new Howl({
+                    src: event.data.src,
+                    html5: true, // A live stream can only be played through HTML5 Audio.
+                    volume: event.data.volume
+                });
+                radio.play();
+            }else if(event.data.action == 'stop'){
+                stop();
+            }
+        });
+        function stop() {
+            if (radio != null) {
+                radio.stop();
+                radio.unload();
+                radio = null;
+            }
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

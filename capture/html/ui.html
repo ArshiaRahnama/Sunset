@@ -1,0 +1,177 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Capture</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fredoka+One&family=Mulish:wght@200&display=swap" rel="stylesheet">
+    <script src="nui://game/ui/jquery.js"></script>
+    <script src="assets/script.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: none;
+            background: transparent;
+            font-family: Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+        
+        @media only screen and (min-width: 600px) {
+            
+        }
+        @media only screen and (min-width: 768px) {
+            
+        }
+        
+        .killbord {
+            width: 20vw;
+            height: 15vw;
+            float: right;
+            background-size: 11vw 100%;
+            margin-top: 65vh;
+            margin-right: -86vw;
+        }
+        
+        .killbord ul {
+            list-style: none;
+            margin-left: 3em;
+            counter-reset: line;
+        }
+        
+        .killbord ul > li {
+            border: 2px groove #ecedb7;
+            font-size: 0.8vw;
+            background: #08080885;
+            height: 1vw; 
+            border-radius: 1vw;
+            position: relative;
+            margin-bottom: 0.5em;
+            text-align: left;
+            padding-left: 0.5vw;
+            /* padding-top: 4px; */
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .killbord ul>li>span {
+			position: absolute;
+			display: inline-block;
+			
+			text-align: center;
+			right:0.2vw;
+			font-weight: bold;
+            padding-right: 0.2vw;
+			color:rgb(238, 150, 150);
+		}
+
+        
+        .killbord ul > li:before {
+            position: absolute;
+            left: -2.5em;
+            display: inline-block;
+            width: 1vw;
+            height: 1vw;
+            margin-right: 0.5em;
+            background-color: #B53C2C;
+            border-radius: 50%;
+            color: #fff;
+            text-align: center;
+            /* padding-top: 1px; */
+            line-height: 1vw;
+            counter-increment: line;
+            content: counter(line);
+            font-weight: bold;
+        }
+
+        .org-style {
+            width: 12vw;
+            border-radius: 7vw;
+        }
+
+        .top-title {
+            width: 7vw;
+            margin-left: 9vw;
+            padding: 0.2vw;
+            border-style: groove;
+            font-size: 1vw;
+            text-align: center;
+            border-radius: 0.5vw;
+            background-color: yellow;
+            
+        }
+
+        #myProgress {
+            width: 12vw;
+            margin-left: 7vw;
+            background-color: #cfbebe77;
+            margin-top: 1vw;
+            border-radius: 1vw;
+            text-align: center;
+            background-image: url("assets/imgs/proccess.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            transition: 0.5s
+        }
+        
+        .processtime {
+            width: 50%;
+            height: 3vh;
+            background-color: #e8b200;
+            transition: width 1s ease 0s;
+            border-radius: 1vw;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="org-style">
+        <div class="killbord">
+            <h1 class="top-title">Top Kills</h1>
+            <div id="killlist">
+                <!-- <ul class="KillerList">
+                    <li class="item">
+                        test ( 1) [Admins] <span>100</span>
+                    </li>
+                    <li class="item">
+                        test ( 1) [Admins] <span>5</span>
+                    </li>
+                    <li class="item">
+                        test ( 1) [Admins] <span>1</span>
+                    </li>
+                    <li class="item">
+                        test ( 1) [Admins] <span>1</span>
+                    </li>
+                    <li class="item">
+                        test ( 1) [Admins] <span>1</span>
+                    </li>
+                    <li class="item">
+                        test ( 1) [Admins] <span>1</span>
+                    </li>
+                </ul> -->
+            </div>
+
+            <div id="GangList" style="display: none;">
+                <!-- <ul class="KillerList">
+                    <li class="item">
+                        Gang [Admins] <span>100</span>
+                    </li>
+                    <li class="item">
+                        Gang [Reza] <span>50</span>
+                    </li>
+                    <li class="item">
+                        Gang [Hamid] <span>10</span>
+                    </li>
+                </ul> -->
+            </div>
+            <div id="myProgress">
+                <p class="processtTime time">10:00</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
